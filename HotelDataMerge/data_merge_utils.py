@@ -58,7 +58,7 @@ def pick_longest(data_list):
 def merge_unique_lists(data_list):
     result = set()
     for item in data_list:
-        result.union(set(item))
+        result = result.union(set(item))
     return list(result)
 
 

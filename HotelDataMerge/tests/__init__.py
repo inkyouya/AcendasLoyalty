@@ -1,0 +1,1 @@
+from HotelDataMerge.tests.data_merge_tests import *  # noqa

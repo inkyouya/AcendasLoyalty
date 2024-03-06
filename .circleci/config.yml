@@ -27,9 +27,10 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: python -m manage.py test
+          command: python -m /app/manage.py test
  
 workflows:
-  sample:
+  test-and-lint:
     jobs:
+      - lint
       - build-and-test

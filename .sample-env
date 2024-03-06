@@ -1,0 +1,16 @@
+# Basic django configuration
+DEBUG=
+SECRET_KEY=
+
+# Database configuration
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASSWORD=
+DATABASE_HOST=
+DATABASE_PORT=
+
+# Redis configuration
+REDIS_HOST=
+REDIS_PORT=
+REDIS_USER=
+REDIS_PASSWORD=

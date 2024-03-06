@@ -1,0 +1,1 @@
+gunicorn HotelDataMerge.wsgi:application --bind 0.0.0.0:80 -w 4

@@ -25,6 +25,9 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
+          name: Spin up docker-compose
+          command: docker-compose up -d
+      - run:
           name: Run tests
           command: python manage.py test
  

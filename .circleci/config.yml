@@ -25,6 +25,9 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
+          name: Create dummy files for compose
+          command: touch .env
+      - run:
           name: Spin up docker-compose
           command: docker-compose up -d
       - run:

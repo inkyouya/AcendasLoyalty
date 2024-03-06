@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - .:/app
+    env_file: .env
+    # command: /app/entrypoint.sh
+    command: gunicorn HotelDataMerge.wsgi:application --bind 0.0.0.0:80
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql-al/data
+    environment:
+      - POSTGRES_PASSWORD=acendasloyalty
+      - POSTGRES_USER=acendasloyalty
+      - POSTGRES_DB=acendasloyalty
+    
+  redis:
+    restart: always
+    image: redis:7.2.4-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - ~/apps/redis:/var/lib/redis-al/data

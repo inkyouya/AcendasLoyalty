@@ -1,0 +1,8 @@
+django==4.2
+gunicorn==21.2.0
+celery==5.3.6
+psycopg2-binary==2.9.6
+requests==2.31.0 
+djangorestframework==3.14.0 
+pycountry==23.12.11
+django-redis==5.4.0 

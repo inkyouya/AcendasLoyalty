@@ -14,7 +14,6 @@ jobs:
           name: Run tests
           command: |
             pip install flake8==4.0.1
-            COPY . .
             flake8 --ignore=E501,F401,E303,E402 .
 
   build-and-test:
@@ -27,7 +26,7 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: python -m /app/manage.py test
+          command: python manage.py test
  
 workflows:
   test-and-lint:

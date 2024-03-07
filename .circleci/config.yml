@@ -36,7 +36,7 @@ jobs:
           command: python manage.py test
  
 workflows:
-  python-test:
+  test-and-lint:
     jobs:
       - lint
-      - build-and-test
+      - python-test

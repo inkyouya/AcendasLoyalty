@@ -19,6 +19,8 @@ jobs:
   python-test:
     docker:
       - image: cimg/python:3.11
+        environment:
+          DATABASE_HOST: localhost 
       - image: cimg/postgres:14.1
         environment:
           POSTGRES_PASSWORD: acendasloyalty

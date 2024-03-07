@@ -20,10 +20,10 @@ jobs:
     docker:
       - image: cimg/python:3.11
       - image: cimg/postgres:14.1
-      environment:
-        POSTGRES_PASSWORD: acendasloyalty
-        POSTGRES_USER: acendasloyalty
-        POSTGRES_DB: acendasloyalty
+        environment:
+          POSTGRES_PASSWORD: acendasloyalty
+          POSTGRES_USER: acendasloyalty
+          POSTGRES_DB: acendasloyalty
     steps:
       - checkout
       - python/install-packages:

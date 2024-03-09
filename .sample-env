@@ -1,4 +1,4 @@
-# Basic django configuration
+# Basic configuration for local development
 DEBUG=
 SECRET_KEY=
 
